@@ -1,51 +1,66 @@
 # Career Skills
 
-用于独立分享的求职相关 Cursor skills 仓库。
+求职场景下的 [Cursor](https://cursor.com) 项目级 Skills，可直接克隆或下载后在 Cursor 里使用，用于写简历、转 HTML、对 JD 做定制等。
 
-这个仓库聚焦在求职场景，而不是通用数据分析方法论。当前首批 skills 包括：
+## 这是什么
 
-- `data-analyst-resume-writer`
-- `resume-html-converter`
+本仓库是一组 **Cursor Skills**：用 Markdown 写成的「说明书」，让 Cursor 里的 AI 按固定规则帮你完成求职相关任务。  
+打开本仓库作为 Cursor 项目后，Agent 会自动读取 `.cursor/skills/` 下的技能，在合适时机调用。
+
+**适合谁**：用 Cursor 写/改简历、准备求职材料的数据分析/商业分析方向同学。
+
+## 当前包含的 Skills
+
+| Skill | 作用 |
+|-------|------|
+| **data-analyst-resume-writer** | 撰写、改写、优化数据分析岗简历；支持中英文、JD 定制、项目经历润色、四字总结格式 |
+| **resume-html-converter** | 把 Markdown/纯文简历转成可打印、可导出 PDF 的 HTML，A4 友好 |
+
+### data-analyst-resume-writer
+
+- 整份简历撰写、单段经历改写、按 JD 定制
+- 项目 bullet 用「四字总结：具体说明」格式
+- 中英文输出、不编造数据、强调 SQL/Python/BI/实验/指标
+
+### resume-html-converter
+
+- Markdown / 纯文 / 结构化笔记 → 单文件 HTML
+- 内嵌 CSS、A4 打印样式、工作经历与项目层级清晰
+- 可与 data-analyst-resume-writer 搭配：先写好内容，再转 HTML 导出
+
+## 怎么用
+
+1. **克隆或下载本仓库**到本地。
+2. 用 **Cursor** 打开该文件夹（File → Open Folder）。
+3. 在聊天里直接说需求，例如：
+   - 「帮我按这个 JD 改一版数据分析简历」
+   - 「把这段项目经历改成四字总结格式」
+   - 「把这份 Markdown 简历转成可打印的 HTML」
+
+无需额外配置，Cursor 会按描述自动选用对应 Skill。
 
 ## 仓库结构
 
 ```text
 career-skills/
+├── README.md
 └── .cursor/
     └── skills/
-        ├── data-analyst-resume-writer/
-        └── resume-html-converter/
+        ├── data-analyst-resume-writer/   # 简历撰写与改写
+        │   ├── SKILL.md
+        │   ├── templates.md
+        │   └── printable-resume-template.html
+        └── resume-html-converter/        # 简历转 HTML
+            ├── SKILL.md
+            └── examples.md
 ```
 
-## 当前包含的 Skills
+## 扩展建议
 
-### `data-analyst-resume-writer`
+本仓库只放**求职相关**的 Skills，例如后续可增加：
 
-用于撰写、改写和优化数据分析岗位简历，适合这些场景：
+- JD 匹配与关键词提炼
+- 自我介绍 / 一句话总结
+- 面试故事与 STAR 整理
 
-- 重写项目经历
-- 针对 JD 做定制化调整
-- 中英文简历转换
-- 强化 SQL、Python、BI、实验分析、指标体系等经历表达
-
-### `resume-html-converter`
-
-用于把简历内容转换成可浏览器预览、可打印、可导出 PDF 的 HTML。
-
-适合这些场景：
-
-- 把 markdown 简历转成 HTML
-- 把结构化项目经历整理成固定版式
-- 输出适合打印的 A4 页面
-
-## 使用方式
-
-把本仓库作为独立项目打开后，Cursor 可读取项目级 `.cursor/skills/` 中的 skills。
-
-如果你想继续扩展，建议优先放入同一主题下的求职相关 skills，例如：
-
-- JD tailoring
-- self introduction writer
-- interview story builder
-
-不建议把通用分析、报表、SQL 查询这类非求职场景 skills 混入本仓库。
+不建议放入与求职无关的通用分析、报表、SQL 等 Skill，以保持主题清晰、方便分享。
