@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Analyst Resume</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 11mm 10mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color: #1f2937;
+      background: #ffffff;
+      line-height: 1.38;
+      font-size: 11.5px;
+    }
+
+    .page {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .header {
+      border-bottom: 2px solid #111827;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin: 0 0 6px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 10px;
+      color: #4b5563;
+      font-size: 11px;
+    }
+
+    .section {
+      margin-bottom: 10px;
+      page-break-inside: avoid;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      margin: 0 0 6px;
+      padding-bottom: 2px;
+      border-bottom: 1px solid #d1d5db;
+    }
+
+    .summary {
+      margin: 0;
+      text-align: justify;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 8px;
+    }
+
+    .skill-chip {
+      padding: 1px 7px;
+      border: 1px solid #d1d5db;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .experience-item,
+    .project-item {
+      margin-bottom: 8px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .row-title {
+      font-weight: 700;
+    }
+
+    .row-date {
+      white-space: nowrap;
+      color: #4b5563;
+    }
+
+    .row-subtitle {
+      color: #4b5563;
+      margin-top: 2px;
+      margin-bottom: 4px;
+    }
+
+    .project-list {
+      margin-top: 6px;
+    }
+
+    .project-name {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .project-bullets {
+      list-style: none;
+      margin: 4px 0 0;
+      padding: 0;
+    }
+
+    .project-bullets li {
+      display: grid;
+      grid-template-columns: 66px 1fr;
+      column-gap: 6px;
+      align-items: start;
+      margin-bottom: 2px;
+    }
+
+    .bullet-tag {
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .bullet-text {
+      margin: 0;
+      word-break: break-word;
+    }
+
+    .education-item {
+      margin-bottom: 8px;
+    }
+
+    @media print {
+      body {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .section,
+      .experience-item,
+      .project-item {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <h1 class="name">姓名 / Full Name</h1>
+      <div class="meta">
+        <span>手机号 / Phone</span>
+        <span>邮箱 / Email</span>
+        <span>城市 / City</span>
+        <span>LinkedIn / GitHub / Portfolio</span>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">个人简介 / Professional Summary</h2>
+      <p class="summary">
+        这里填写中英文任选的简历摘要，突出数据分析方向、业务理解、SQL/Python/BI
+        工具栈，以及对增长、留存、运营、产品或风控的实际支持结果。
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">核心技能 / Core Skills</h2>
+      <div class="skills">
+        <span class="skill-chip">SQL</span>
+        <span class="skill-chip">Python</span>
+        <span class="skill-chip">A/B Testing</span>
+        <span class="skill-chip">Tableau</span>
+        <span class="skill-chip">Power BI</span>
+        <span class="skill-chip">Metrics Design</span>
+        <span class="skill-chip">Business Analysis</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">工作经历 / Work Experience</h2>
+
+      <article class="experience-item">
+        <div class="row">
+          <div class="row-title">公司名 | 数据分析师</div>
+          <div class="row-date">2022.06 - 2025.03</div>
+        </div>
+        <div class="row-subtitle">城市 | 部门 / 团队</div>
+
+        <div class="project-list">
+          <section class="project-item">
+            <div class="row">
+              <div class="project-name">项目名称一 / Project One</div>
+              <div class="row-date">2024.01 - 2024.09</div>
+            </div>
+            <ul class="project-bullets">
+              <li>
+                <span class="bullet-tag">指标搭建：</span>
+                <p class="bullet-text">
+                  围绕核心业务链路定义指标口径并搭建监控看板，使用 SQL 与
+                  Python 支持日常经营分析和异常预警。
+                </p>
+              </li>
+              <li>
+                <span class="bullet-tag">问题诊断：</span>
+                <p class="bullet-text">
+                  针对转化率波动进行分层拆解，识别关键影响因素并提出优化建议，
+                  推动相关团队调整投放与页面策略。
+                </p>
+              </li>
+              <li>
+                <span class="bullet-tag">流程优化：</span>
+                <p class="bullet-text">
+                  优化取数与报表流程，减少手工整理时间并提升分析交付效率。
+                </p>
+              </li>
+            </ul>
+          </section>
+
+          <section class="project-item">
+            <div class="row">
+              <div class="project-name">项目名称二 / Project Two</div>
+              <div class="row-date">2023.05 - 2023.12</div>
+            </div>
+            <ul class="project-bullets">
+              <li>
+                <span class="bullet-tag">实验分析：</span>
+                <p class="bullet-text">
+                  评估活动与策略实验效果，输出结论与建议，支持产品和运营进行方案迭代。
+                </p>
+              </li>
+              <li>
+                <span class="bullet-tag">经营复盘：</span>
+                <p class="bullet-text">
+                  建立周度经营复盘框架，跟踪核心指标变化并识别增长机会与风险点。
+                </p>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">教育经历 / Education</h2>
+      <div class="education-item">
+        <div class="row">
+          <div class="row-title">学校名称 | 专业 | 学位</div>
+          <div class="row-date">2018.09 - 2022.06</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
